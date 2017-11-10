@@ -1,0 +1,6 @@
+*.pyc
+*.sage.py
+/results/
+/cache/
+/*egg-info/
+/.idea/
