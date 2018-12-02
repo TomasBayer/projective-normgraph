@@ -8,7 +8,7 @@ setuptools.setup(
     name="sage-projective-normgraph",
     version="0.1",
     author="Tomas Bayer",
-    author_email="tomas.bayer@fu-berlin.de",
+    author_email="tomas.bayer@gmail.com",
     description="SageMath package for projective norm graphs",
     long_description=long_description,
     long_description_content_type="text/markdown",
