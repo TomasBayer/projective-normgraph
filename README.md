@@ -7,7 +7,7 @@ This SageMath package provides utilities to do computations with projective norm
 
 2. Download the source from this repository.
 
-    $ git clone https://github.com/TomasBayer/projective-normgraph.git
+    $ git clone https://github.com/TomasBayer/sage-projective-normgraphs.git
 
 3. Change to the root directory and run
 
