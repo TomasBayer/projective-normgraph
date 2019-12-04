@@ -81,7 +81,7 @@ class NormGraphCanonicalPairNeighbourhoodCache(object):
         self._cache = {t: [] for t in canonical_pair_types}
         pool = ProcessingPool(max_processes=config.get_max_processes())
         for (_, ret) in pool.run(NormGraphCanonicalPairNeighbourhoodCache.__build_cache_worker,
-                                 [(self, A, v, Y) for A in
+                                 [(self.norm_graph, A, v, Y) for A in
                                   chunk(self.norm_graph.L,
                                         sage.all.ceil(self.norm_graph.L.size() / pool.max_processes))]):
             for canonical_pair_type in canonical_pair_types:
