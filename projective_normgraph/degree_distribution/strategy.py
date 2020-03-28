@@ -145,8 +145,9 @@ class RandomGenericSampleDDCS(AbstractDegreeDistributionComputationStrategy):
         from projective_normgraph.degree_distribution.strategy import compute_restricted_degrees
 
         degree_distribution = DegreeDistribution(norm_graph, r, None)
+        canonical_pair = norm_graph.canonical_pair(type)
         canonical_pair_nbhd = norm_graph.canonical_pair_neighbourhood(type)
-        vxset_iterator = norm_graph.random_generic_vertex_set_iterator(r - 2, set(v[0] for v in canonical_pair_nbhd))
+        vxset_iterator = norm_graph.random_generic_vertex_set_iterator(r - 2, set(v[0] for v in canonical_pair))
         compute_restricted_degrees(norm_graph, degree_distribution, truncate(vxset_iterator, count),
                                    canonical_pair_nbhd)
         return degree_distribution
