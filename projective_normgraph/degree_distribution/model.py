@@ -61,7 +61,7 @@ class DegreeDistribution(object):
 
     @staticmethod
     def load(ng, sample_description, r, results_dir):
-        expr = re.compile(r'(.*){!r}\({},{}\)_{}\({}\).sobj'.format(ng.variant, ng.q, ng.t, r, sample_description))
+        expr = re.compile(r'(.*){!s}\({},{}\)_{}\({}\).sobj'.format(ng.variant, ng.q, ng.t, r, sample_description))
         for file_name in os.listdir(results_dir):
             if expr.match(file_name):
                 yield sage.all.load(os.path.join(results_dir, file_name))
